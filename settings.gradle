@@ -1,0 +1,2 @@
+rootProject.name='app-administra-turmas-v1'
+include ':app'

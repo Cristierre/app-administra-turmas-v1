@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+
+
+
+    <LinearLayout
+        style="@style/formulario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="400dp"
+            android:layout_height="350dp"
+            app:srcCompat="@mipmap/logo_fadergs"
+            android:layout_marginBottom="100dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-208dp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            style="@style/etForm"
+            android:inputType="textPersonName"
+            android:hint="usuario"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="451dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/etForm"
+            android:inputType="textPersonName"
+            android:hint="senha"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/btLogin"
+            android:textSize="50px"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="539dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="formulario" parent="AppTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@mipmap/books_backgorund</item>
+    </style>
+    <style name="etForm" parent="AppTheme">
+        <item name="android:layout_height">65dp</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">60px</item>
+        <item name="android:background">#81FFFFFF</item>
+
+
+    </style>
+
+</resources>
