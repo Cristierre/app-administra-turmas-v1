@@ -20,10 +20,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="400dp"
-            android:layout_height="350dp"
-            android:layout_marginTop="189dp"
-            android:layout_marginBottom="10dp"
+            style="@style/imgLogo"
             app:srcCompat="@mipmap/logo_fadergs"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="-208dp" />
