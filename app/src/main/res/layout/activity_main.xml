@@ -50,6 +50,8 @@
             android:layout_height="60dp"
             android:text="@string/btLogin"
             android:textSize="50px"
+            android:backgroundTint="#D51212"
+            android:textColor="#fff"
             android:layout_marginBottom="300dp"
             tools:layout_editor_absoluteX="159dp"
             tools:layout_editor_absoluteY="539dp" />
