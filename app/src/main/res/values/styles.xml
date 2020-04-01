@@ -19,6 +19,12 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@mipmap/books_backgorund</item>
     </style>
+    <style name="tvCadastro" parent="AppTheme">
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="llCadastro" parent="AppTheme">
+        <item name="android:background">#7EFFFFFF</item>
+    </style>
 
     <style name="etForm" parent="AppTheme">
         <item name="android:layout_height">65dp</item>
