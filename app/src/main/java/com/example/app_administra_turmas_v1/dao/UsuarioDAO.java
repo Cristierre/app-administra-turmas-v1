@@ -32,8 +32,8 @@ public class UsuarioDAO {
     }
 
     public static List<Usuario> listar(Context cont) {
-        List<Usuario> usuario = new ArrayList<>();
-
+        List<Usuario> usuarios = new ArrayList<>();
+        Usuario usuario;
         Banco banco = new Banco(cont);
         SQLiteDatabase db = banco.getReadableDatabase();
 
@@ -42,14 +42,15 @@ public class UsuarioDAO {
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
-               usuario.add(new Usuario(
-                        cursor.getInt(0),
+                usuario = new Usuario(
                         cursor.getString(1),
-                        cursor.getString(2))
-                );
+                        cursor.getString(2));
+                usuario.setId(cursor.getInt(0));
+
+                usuarios.add(usuario);
             } while (cursor.moveToNext());
         }
-        return usuario;
+        return usuarios;
     }
 
     public static Usuario buscaPorNomeESenha(Context cont){
@@ -64,10 +65,11 @@ public class UsuarioDAO {
             cursor.moveToFirst();
             do {
                 usuario = new Usuario(
-                        cursor.getInt(0),
                         cursor.getString(1),
                         cursor.getString(2)
                 );
+                usuario.setId(cursor.getInt(0));
+
             } while (cursor.moveToNext());
 
         }
