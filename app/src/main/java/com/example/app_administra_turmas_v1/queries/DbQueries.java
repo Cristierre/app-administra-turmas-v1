@@ -12,4 +12,5 @@ public class DbQueries {
                                         "sala VARCHAR(15)," +
                                         "professor VARCHAR(15)," +
                                         "sala VARCHAR(10))";
+    public static String SELECT_TURMA = "SELECT * FROM TURMA";
 }
