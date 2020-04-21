@@ -23,7 +23,7 @@
         <item name="android:layout_width">250dp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">60px</item>
-        <item name="android:background">#81FFFFFF</item>
+        <item name="android:background">#DFFFFFFF</item>
 
 
     </style>
