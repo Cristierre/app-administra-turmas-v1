@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">app-administra-turmas-v1</string>
-    <string name="btLogin">Login</string>
+    <string name="btLogin">LOGIN</string>
     <string name="etUsuario">Usuario</string>
     <string name="etSenha">Senha</string>
+    <string name="tvCadastro">CADASTRO</string>
+    <string name="etNome">Nome</string>
+    <string name="etSenha2">Confirmação de senha</string>
+    <string name="btnCadastrar">CADASTRAR</string>
 </resources>
