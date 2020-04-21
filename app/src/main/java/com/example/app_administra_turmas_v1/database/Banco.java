@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import static com.example.app_administra_turmas_v1.queries.DbQueries.CREATE_TURMA;
+import static com.example.app_administra_turmas_v1.queries.DbQueries.CREATE_USUARIO;
+
 
 public class Banco extends SQLiteOpenHelper {
     final static String NAME_PROJECT = "AppAdmistraTurmas";
@@ -14,10 +17,8 @@ public class Banco extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS USUARIO (" +
-                "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                "nome VARCHAR(15)," +
-                "password VARCHAR(15))");
+        db.execSQL(CREATE_USUARIO);
+        db.execSQL(CREATE_TURMA);
     }
 
     @Override
