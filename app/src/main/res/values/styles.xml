@@ -11,20 +11,16 @@
     <style name="imgLogo" parent="AppTheme">
         <item name="android:layout_width">400dp</item>
         <item name="android:layout_height">350dp</item>
-        <item name="android:layout_marginTop">189dp</item>
-        <item name="android:layout_marginBottom">10dp</item>
     </style>
 
     <style name="formulario" parent="AppTheme">
         <item name="android:gravity">center</item>
-        <item name="android:background">@mipmap/books_backgorund</item>
+        <item name="android:background">@drawable/books</item>
     </style>
 
     <style name="etForm" parent="AppTheme">
         <item name="android:layout_height">65dp</item>
         <item name="android:layout_width">250dp</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:layout_marginBottom">25dp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">60px</item>
         <item name="android:background">#81FFFFFF</item>
