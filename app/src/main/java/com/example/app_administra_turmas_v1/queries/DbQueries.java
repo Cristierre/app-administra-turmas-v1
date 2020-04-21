@@ -19,6 +19,6 @@ public class DbQueries {
     public static String SELECT_USUARIO = "SELECT * FROM USUARIO";
 
     public static String SELECT_NOME_SENHA = "SELECT * FROM USUARIO " +
-                                             "WHERE NOME = '<NOME>'," +
+                                             "WHERE NOME = '<NOME>'" +
                                              "AND PASSWORD = '<PASSWORD>'";
 }

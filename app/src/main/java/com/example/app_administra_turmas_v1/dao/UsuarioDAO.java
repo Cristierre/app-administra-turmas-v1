@@ -53,17 +53,18 @@ public class UsuarioDAO {
         return usuarios;
     }
 
-    public static Usuario buscaPorNomeESenha(Context cont){
-
+    public static Usuario buscaPorNomeESenha(Context cont, String nome, String senha){
         Usuario usuario = null;
         Banco banco = new Banco(cont);
         SQLiteDatabase db = banco.getReadableDatabase();
 
-        Cursor cursor = db.rawQuery(SELECT_NOME_SENHA, null);
+        Cursor cursor = db.rawQuery(SELECT_NOME_SENHA.replace("<NOME>", nome)
+                                    .replace("<PASSWORD>", senha), null);
 
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
+                System.out.println(cursor.getString(1));
                 usuario = new Usuario(
                         cursor.getString(1),
                         cursor.getString(2)

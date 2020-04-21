@@ -46,6 +46,11 @@ public class Cadastro extends AppCompatActivity {
             Toast.makeText(this, "Senhas não são a mesma!",Toast.LENGTH_LONG).show();
         }else{
             inserir(this, new Usuario(nome, senha));
+            Toast.makeText(this, "Usuario salvo com sucesso!",Toast.LENGTH_LONG).show();
+            etNome.clearComposingText();
+            etSenha.clearComposingText();
+            etSenha2.clearComposingText();
+            finish();
         }
     }
 }
