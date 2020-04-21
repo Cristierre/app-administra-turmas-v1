@@ -6,11 +6,19 @@ public class DbQueries {
                                         "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                                         "nome VARCHAR(15)," +
                                         "password VARCHAR(15))";
+
     public static String CREATE_TURMA = "CREATE TABLE IF NOT EXISTS USUARIO (" +
                                         "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                                         "turma VARCHAR(15)," +
                                         "sala VARCHAR(15)," +
                                         "professor VARCHAR(15)," +
                                         "sala VARCHAR(10))";
+
     public static String SELECT_TURMA = "SELECT * FROM TURMA";
+
+    public static String SELECT_USUARIO = "SELECT * FROM USUARIO";
+
+    public static String SELECT_NOME_SENHA = "SELECT * FROM USUARIO " +
+                                             "WHERE NOME = '<NOME>'," +
+                                             "AND PASSWORD = '<PASSWORD>'";
 }

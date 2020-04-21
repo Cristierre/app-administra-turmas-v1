@@ -14,7 +14,7 @@ import java.util.List;
 import static com.example.app_administra_turmas_v1.queries.DbQueries.SELECT_TURMA;
 
 public class TurmaDAO {
-    public static void cadastrarTurma(Context cont, Turma turma) {
+    public static void inserir(Context cont, Turma turma) {
         Banco banco = new Banco(cont);
 
         ContentValues contentValues = new ContentValues();
@@ -50,4 +50,5 @@ public class TurmaDAO {
         }
         return turmas;
     }
+
 }
