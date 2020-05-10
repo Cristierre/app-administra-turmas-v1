@@ -5,12 +5,14 @@ public class Turma {
     private String turma;
     private String professor;
     private String sala;
+    private String onOf;
 
     public Turma(int id, String turma, String professor, String sala) {
         this.id = id;
         this.turma = turma;
         this.professor = professor;
         this.sala = sala;
+        this.onOf = "ON";
     }
 
     public int getId() {
@@ -43,5 +45,13 @@ public class Turma {
 
     public void setSala(String sala) {
         this.sala = sala;
+    }
+
+    public String getOnOf() {
+        return onOf;
+    }
+
+    public void setOnOf(String onOf) {
+        this.onOf = onOf;
     }
 }

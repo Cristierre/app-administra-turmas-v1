@@ -57,23 +57,27 @@ public class UsuarioDAO {
         Usuario usuario = null;
         Banco banco = new Banco(cont);
         SQLiteDatabase db = banco.getReadableDatabase();
+        try{
+            Cursor cursor = db.rawQuery(SELECT_NOME_SENHA.replace("<NOME>", nome)
+                    .replace("<PASSWORD>", senha), null);
 
-        Cursor cursor = db.rawQuery(SELECT_NOME_SENHA.replace("<NOME>", nome)
-                                    .replace("<PASSWORD>", senha), null);
+            if (cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                do {
+                    System.out.println(cursor.getString(1));
+                    usuario = new Usuario(
+                            cursor.getString(1),
+                            cursor.getString(2)
+                    );
+                    usuario.setId(cursor.getInt(0));
 
-        if (cursor.getCount() > 0) {
-            cursor.moveToFirst();
-            do {
-                System.out.println(cursor.getString(1));
-                usuario = new Usuario(
-                        cursor.getString(1),
-                        cursor.getString(2)
-                );
-                usuario.setId(cursor.getInt(0));
+                } while (cursor.moveToNext());
 
-            } while (cursor.moveToNext());
-
+            }
+        }catch (Error e){
+            System.out.println("Erro ao validar usuário: "+ e.getMessage());
         }
+
         return usuario;
 
     }

@@ -2,7 +2,6 @@ package com.example.app_administra_turmas_v1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,8 +14,6 @@ import static com.example.app_administra_turmas_v1.dao.UsuarioDAO.inserir;
 public class Cadastro extends AppCompatActivity {
     private EditText etNome, etSenha, etSenha2;
     private Button btnCadatrar;
-    private String acao;
-    private Usuario usuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +25,10 @@ public class Cadastro extends AppCompatActivity {
         btnCadatrar = findViewById(R.id.btnCadastrar);
 
 
-        btnCadatrar.setOnClickListener((v)-> salvarTurma());
+        btnCadatrar.setOnClickListener((v)-> salvarUsuario());
     }
 
-    private void salvarTurma(){
+    private void salvarUsuario(){
         String nome = etNome.getText().toString();
         String senha = etSenha.getText().toString();
         String senha2 = etSenha2.getText().toString();

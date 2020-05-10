@@ -6,14 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.app_administra_turmas_v1.adapter.AdapterTurma;
+import com.example.app_administra_turmas_v1.dao.TurmaDAO;
+import com.example.app_administra_turmas_v1.dao.UsuarioDAO;
+import com.example.app_administra_turmas_v1.entities.Turma;
 import com.example.app_administra_turmas_v1.entities.Usuario;
 
+import java.util.List;
+
+import static com.example.app_administra_turmas_v1.dao.TurmaDAO.inserir;
 import static com.example.app_administra_turmas_v1.dao.UsuarioDAO.buscaPorNomeESenha;
 
 public class MainActivity extends AppCompatActivity {
     private EditText etNome, etSenha;
+    private ListView lvLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         etNome = findViewById(R.id.etUsuario);
         etSenha = findViewById(R.id.etSenha);
 
+
         Button btnCadastrar = findViewById(R.id.btnCadastrar);
         Button btnLogin = findViewById(R.id.btnLogin);
 
@@ -30,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
             boolean valido = validar();
             if(valido){
                Intent intent = new Intent(this, Turmas.class);
+               carregarTurmas();
+
                 startActivity(intent);
            }else{
                Toast.makeText(this, "Usuário e ou senha inválido!",Toast.LENGTH_LONG).show();
@@ -48,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean validar() {
         String nome = etNome.getText().toString();
         String senha = etSenha.getText().toString();
-        System.out.println("eddddddddddddddddddddddd "+nome);
-        System.out.println("eddddddddddddddddddddddd "+senha);
 
         Usuario usuario = buscaPorNomeESenha(this, nome, senha);
         if (usuario == null){
@@ -58,5 +68,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+    private void carregarTurmas () {
+        List<Turma> listaTurmas = TurmaDAO.listar(this);
+        AdapterTurma adapter = new AdapterTurma(this, R.layout.support_simple_spinner_dropdown_item, listaTurmas);
+        lvLista.setAdapter(adapter);
+
     }
 }

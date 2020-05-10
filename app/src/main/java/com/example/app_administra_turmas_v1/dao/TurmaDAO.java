@@ -25,7 +25,7 @@ public class TurmaDAO {
 
         SQLiteDatabase db = banco.getWritableDatabase();
 
-        db.insert("TURMA", null, contentValues);
+        db.insert("turma", null, contentValues);
 
     }
 
@@ -34,21 +34,22 @@ public class TurmaDAO {
 
         Banco banco = new Banco(cont);
         SQLiteDatabase db = banco.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery(SELECT_TURMA, null);
-
-        if (cursor.getCount() > 0) {
-            cursor.moveToFirst();
-            do {
-                new Turma(
-                        cursor.getInt(0),
-                        cursor.getString(1),
-                        cursor.getString(2),
-                        cursor.getString(3)
-                );
-            } while (cursor.moveToNext());
+        try {
+            Cursor cursor = db.rawQuery(SELECT_TURMA, null);
+            if (cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                do {
+                    new Turma(
+                            cursor.getInt(0),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3)
+                    );
+                } while (cursor.moveToNext());
+            }
+        } catch (Error e) {
+            System.out.println("Erro ao buscar tormas: " + e.getMessage());
         }
         return turmas;
     }
-
 }
