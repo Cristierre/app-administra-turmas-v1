@@ -7,4 +7,8 @@
     <string name="etNome">Nome</string>
     <string name="etSenha2">Confirmação de senha</string>
     <string name="btnCadastrar">CADASTRAR</string>
+    <string name="btnTurmas">TURMAS</string>
+    <string name="btnProfessores">PROFESSORES</string>
+    <string name="btnAlunos">ALUNOS</string>
+    <string name="btnLogOut">LOGOUT</string>
 </resources>

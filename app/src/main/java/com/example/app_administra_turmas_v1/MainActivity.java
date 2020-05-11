@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(v -> {
             boolean valido = validar();
             if(valido){
-               Intent intent = new Intent(this, Turmas.class);
-//               carregarTurmas();
+               Intent intent = new Intent(this, Menu.class);
 
                 startActivity(intent);
            }else{

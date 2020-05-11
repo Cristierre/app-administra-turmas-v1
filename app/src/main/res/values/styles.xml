@@ -32,6 +32,14 @@
         <item name="android:textColor">#fff</item>
         <item name="android:textSize">23sp</item>
     </style>
+    <style name="btnMenu" parent="AppTheme">
+        <item name="android:backgroundTint">#D51212</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:layout_width">254dp</item>
+        <item name="android:layout_height">66dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
