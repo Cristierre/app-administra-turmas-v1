@@ -11,4 +11,8 @@
     <string name="btnProfessores">PROFESSORES</string>
     <string name="btnAlunos">ALUNOS</string>
     <string name="btnLogOut">LOGOUT</string>
+    <string name="tvVazio">VAZIO</string>
+    <string name="etTurma">Nome turma</string>
+    <string name="etProfessor">Nome professor</string>
+    <string name="etSala">Qual sala</string>
 </resources>

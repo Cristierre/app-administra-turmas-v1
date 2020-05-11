@@ -20,12 +20,12 @@ public class TurmaDAO {
         ContentValues contentValues = new ContentValues();
 
         contentValues.put("turma", turma.getTurma());
-        contentValues.put("professor", turma.getProfessor());
         contentValues.put("sala", turma.getSala());
+        contentValues.put("professor", turma.getProfessor());
 
         SQLiteDatabase db = banco.getWritableDatabase();
 
-        db.insert("turma", null, contentValues);
+        db.insert("TURMA", null, contentValues);
 
     }
 

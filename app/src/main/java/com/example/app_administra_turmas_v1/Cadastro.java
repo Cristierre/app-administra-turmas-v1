@@ -19,10 +19,10 @@ public class Cadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        etNome = findViewById(R.id.etNome);
-        etSenha = findViewById(R.id.etSenha);
-        etSenha2 = findViewById(R.id.etSenha2);
-        btnCadatrar = findViewById(R.id.btnCadastrar);
+        etNome = findViewById(R.id.etNomeTurma);
+        etSenha = findViewById(R.id.etProfessor);
+        etSenha2 = findViewById(R.id.etSala);
+        btnCadatrar = findViewById(R.id.btnCadastrarTurma);
 
 
         btnCadatrar.setOnClickListener((v)-> salvarUsuario());

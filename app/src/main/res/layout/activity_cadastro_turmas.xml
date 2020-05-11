@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/books"
-    tools:context=".Cadastro">
+    tools:context=".CadastroTurmas">
 
     <EditText
         android:id="@+id/etNomeTurma"
-        android:layout_width="341dp"
-        android:layout_height="43dp"
+        android:layout_width="346dp"
+        android:layout_height="59dp"
         android:ems="10"
-        android:hint="@string/etNome"
+        android:hint="@string/etTurma"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -27,7 +27,7 @@
         android:layout_width="346dp"
         android:layout_height="56dp"
         android:ems="10"
-        android:hint="@string/etSenha"
+        android:hint="@string/etProfessor"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -42,7 +42,7 @@
         android:layout_width="341dp"
         android:layout_height="54dp"
         android:ems="10"
-        android:hint="@string/etSenha2"
+        android:hint="@string/etSala"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -77,4 +77,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.707" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

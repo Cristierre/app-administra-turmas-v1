@@ -6,12 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.app_administra_turmas_v1.entities.Usuario;
-
-import java.util.List;
 
 import static com.example.app_administra_turmas_v1.dao.UsuarioDAO.buscaPorNomeESenha;
 
@@ -24,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etNome = findViewById(R.id.etUsuario);
-        etSenha = findViewById(R.id.etSenha);
+        etSenha = findViewById(R.id.etProfessor);
 
 
-        Button btnCadastrar = findViewById(R.id.btnCadastrar);
+        Button btnCadastrar = findViewById(R.id.btnCadastrarTurma);
         Button btnLogin = findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(v -> {
