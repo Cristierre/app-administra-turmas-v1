@@ -28,7 +28,13 @@ public class Turmas extends AppCompatActivity {
 
         lvLista = findViewById(R.id.lvListaTurmas);
 
-        listar(this );
+        carregarTurmas();
+
+    }
+    private void carregarTurmas () {
+        List<Turma> listaTurmas = TurmaDAO.listar(this);
+        AdapterTurma adapter = new AdapterTurma(this, R.layout.support_simple_spinner_dropdown_item, listaTurmas);
+        lvLista.setAdapter(adapter);
 
     }
 

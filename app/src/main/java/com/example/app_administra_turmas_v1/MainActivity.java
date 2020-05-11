@@ -9,10 +9,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.app_administra_turmas_v1.adapter.AdapterTurma;
-import com.example.app_administra_turmas_v1.dao.TurmaDAO;
-import com.example.app_administra_turmas_v1.dao.UsuarioDAO;
-import com.example.app_administra_turmas_v1.entities.Turma;
 import com.example.app_administra_turmas_v1.entities.Usuario;
 
 import java.util.List;
@@ -21,7 +17,6 @@ import static com.example.app_administra_turmas_v1.dao.UsuarioDAO.buscaPorNomeES
 
 public class MainActivity extends AppCompatActivity {
     private EditText etNome, etSenha;
-    private ListView lvLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +61,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return false;
-    }
-    private void carregarTurmas () {
-        List<Turma> listaTurmas = TurmaDAO.listar(this);
-        AdapterTurma adapter = new AdapterTurma(this, R.layout.support_simple_spinner_dropdown_item, listaTurmas);
-        lvLista.setAdapter(adapter);
-
     }
 }
