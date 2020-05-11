@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:padding="7dp"
+    android:id="@+id/layoutLista">
+
+    <TextView
+        android:id="@+id/tvlTurma"
+        android:layout_width="123dp"
+        style="@style/tvLista"
+        android:layout_height="match_parent"
+         />
+
+    <TextView
+        android:id="@+id/tvlSala"
+        style="@style/tvLista"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+         />
+
+    <TextView
+        android:id="@+id/tvlOnOf"
+        android:layout_width="match_parent"
+        style="@style/tvLista"
+        android:layout_height="match_parent"
+         />
+
+</LinearLayout>

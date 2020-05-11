@@ -17,8 +17,8 @@ public class Banco extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_USUARIO);
         db.execSQL(CREATE_TURMA);
+        db.execSQL(CREATE_USUARIO);
     }
 
     @Override
