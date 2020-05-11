@@ -7,7 +7,13 @@ public class Turma {
     private String sala;
     private String onOf;
 
-    public Turma(int id, String turma, String professor, String sala) {
+    public Turma( String turma, String professor, String sala) {
+        this.turma = turma;
+        this.professor = professor;
+        this.sala = sala;
+        this.onOf = "ON";
+    }
+    public Turma( int id, String turma, String professor, String sala) {
         this.id = id;
         this.turma = turma;
         this.professor = professor;

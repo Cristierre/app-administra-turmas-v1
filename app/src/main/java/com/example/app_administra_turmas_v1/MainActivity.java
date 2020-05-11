@@ -17,7 +17,6 @@ import com.example.app_administra_turmas_v1.entities.Usuario;
 
 import java.util.List;
 
-import static com.example.app_administra_turmas_v1.dao.TurmaDAO.inserir;
 import static com.example.app_administra_turmas_v1.dao.UsuarioDAO.buscaPorNomeESenha;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             boolean valido = validar();
             if(valido){
                Intent intent = new Intent(this, Turmas.class);
-               carregarTurmas();
+//               carregarTurmas();
 
                 startActivity(intent);
            }else{

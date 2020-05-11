@@ -15,6 +15,7 @@ import com.example.app_administra_turmas_v1.entities.Turma;
 
 import java.util.List;
 
+import static com.example.app_administra_turmas_v1.dao.TurmaDAO.inserir;
 import static com.example.app_administra_turmas_v1.dao.TurmaDAO.listar;
 
 public class Turmas extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class Turmas extends AppCompatActivity {
         setContentView(R.layout.activity_turmas);
 
         lvLista = findViewById(R.id.lvListaTurmas);
+
         listar(this );
 
     }
