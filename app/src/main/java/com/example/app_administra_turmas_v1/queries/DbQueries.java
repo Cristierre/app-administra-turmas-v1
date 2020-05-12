@@ -7,11 +7,12 @@ public class DbQueries {
                                         "nome VARCHAR(15)," +
                                         "password VARCHAR(15))";
 
-    public static String CREATE_TURMA = "CREATE TABLE IF NOT EXISTS turma (" +
+    public static String CREATE_TURMA =  "CREATE TABLE IF NOT EXISTS turma (" +
                                         "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                                         "turma VARCHAR(15)," +
                                         "sala VARCHAR(15)," +
-                                        "professor VARCHAR(15))";
+                                        "professor VARCHAR(15)," +
+                                        "onof VARCHAR(2))";
 
     public static String SELECT_TURMA = "SELECT * FROM TURMA";
 

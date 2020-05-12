@@ -14,19 +14,20 @@ import java.util.List;
 import static com.example.app_administra_turmas_v1.queries.DbQueries.SELECT_TURMA;
 
 public class TurmaDAO {
-    public static void inserir(Context cont, Turma turma) {
+    public static void inserir(Context cont, Turma turma){
+
         Banco banco = new Banco(cont);
 
         ContentValues contentValues = new ContentValues();
 
         contentValues.put("turma", turma.getTurma());
-        contentValues.put("sala", turma.getSala());
         contentValues.put("professor", turma.getProfessor());
+        contentValues.put("sala", turma.getSala());
+        contentValues.put("onof", turma.getOnOf());
 
         SQLiteDatabase db = banco.getWritableDatabase();
 
         db.insert("TURMA", null, contentValues);
-
     }
 
     public static List<Turma> listar(Context cont) {
@@ -48,7 +49,7 @@ public class TurmaDAO {
                 } while (cursor.moveToNext());
             }
         } catch (Error e) {
-            System.out.println("Erro ao buscar tormas: " + e.getMessage());
+            System.out.println("Erro ao buscar turmas: " + e.getMessage());
         }
         return turmas;
     }

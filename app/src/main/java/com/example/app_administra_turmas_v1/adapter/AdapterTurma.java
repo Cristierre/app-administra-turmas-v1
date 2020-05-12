@@ -18,7 +18,7 @@ public class AdapterTurma extends BaseAdapter {
     private List<Turma> listaTurma;
     private LayoutInflater inflater;
 
-    public AdapterTurma(Context context, int support_simple_spinner_dropdown_item, List<Turma> lista) {
+    public AdapterTurma(Context context, List<Turma> lista) {
         this.listaTurma = lista;
         this.inflater = LayoutInflater.from(context);
     }

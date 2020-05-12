@@ -2,6 +2,7 @@ package com.example.app_administra_turmas_v1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -12,8 +13,6 @@ import com.example.app_administra_turmas_v1.entities.Turma;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
-
-import static com.example.app_administra_turmas_v1.dao.TurmaDAO.inserir;
 
 public class Turmas extends AppCompatActivity {
 
@@ -26,9 +25,6 @@ public class Turmas extends AppCompatActivity {
 
         lvLista = findViewById(R.id.lvListaTurmas);
 
-        Turma turma = new Turma("sde","we","wqeqw");
-        inserir(this, turma);
-
         carregarTurmas();
 
         FloatingActionButton fab = findViewById(R.id.btnAddTurma);
@@ -36,7 +32,9 @@ public class Turmas extends AppCompatActivity {
         fab.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Turmas.this,CadastroTurmas.class);
+                startActivity(intent);
+                carregarTurmas();
             }
         }));
     }
@@ -44,7 +42,7 @@ public class Turmas extends AppCompatActivity {
 
         List<Turma> listaTurmas = TurmaDAO.listar(this);
 
-            AdapterTurma adapter = new AdapterTurma(this, R.layout.support_simple_spinner_dropdown_item, listaTurmas);
+            AdapterTurma adapter = new AdapterTurma(this, listaTurmas);
             lvLista.setAdapter(adapter);
 
 
