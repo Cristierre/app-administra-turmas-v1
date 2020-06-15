@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CadastroTurmas"></activity>
         <activity android:name=".Menu" />
-        <activity android:name=".Turmas" />
+        <activity android:name=".TurmasActivity" />
         <activity android:name=".Cadastro" />
         <activity
             android:name=".MainActivity"

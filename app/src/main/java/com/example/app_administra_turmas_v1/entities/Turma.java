@@ -5,20 +5,17 @@ public class Turma {
     private String turma;
     private String professor;
     private String sala;
-    private String onOf;
 
     public Turma( String turma, String professor, String sala) {
         this.turma = turma;
         this.professor = professor;
         this.sala = sala;
-        this.onOf = "ON";
     }
     public Turma( int id, String turma, String professor, String sala) {
         this.id = id;
         this.turma = turma;
         this.professor = professor;
         this.sala = sala;
-        this.onOf = "ON";
     }
 
     public int getId() {
@@ -53,11 +50,8 @@ public class Turma {
         this.sala = sala;
     }
 
-    public String getOnOf() {
-        return onOf;
-    }
-
-    public void setOnOf(String onOf) {
-        this.onOf = onOf;
+    @Override
+    public String toString() {
+        return "Turma: "+turma+"      Professor: "+professor+"      Sala: "+sala;
     }
 }

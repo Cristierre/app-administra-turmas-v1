@@ -11,8 +11,7 @@ public class DbQueries {
                                         "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                                         "turma VARCHAR(15)," +
                                         "sala VARCHAR(15)," +
-                                        "professor VARCHAR(15)," +
-                                        "onof VARCHAR(2))";
+                                        "professor VARCHAR(15))";
 
     public static String SELECT_TURMA = "SELECT * FROM TURMA";
 

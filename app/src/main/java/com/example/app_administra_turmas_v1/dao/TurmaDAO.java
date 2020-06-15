@@ -23,7 +23,6 @@ public class TurmaDAO {
         contentValues.put("turma", turma.getTurma());
         contentValues.put("professor", turma.getProfessor());
         contentValues.put("sala", turma.getSala());
-        contentValues.put("onof", turma.getOnOf());
 
         SQLiteDatabase db = banco.getWritableDatabase();
 
@@ -40,12 +39,12 @@ public class TurmaDAO {
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();
                 do {
-                    new Turma(
+                    turmas.add(new Turma(
                             cursor.getInt(0),
                             cursor.getString(1),
                             cursor.getString(2),
                             cursor.getString(3)
-                    );
+                    ));
                 } while (cursor.moveToNext());
             }
         } catch (Error e) {
