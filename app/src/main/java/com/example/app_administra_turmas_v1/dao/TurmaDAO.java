@@ -29,7 +29,7 @@ public class TurmaDAO {
         db.insert("TURMA", null, contentValues);
     }
 
-    public static List<Turma> listar(Context cont) {
+    public static List<Turma> listarTurmas(Context cont) {
         List<Turma> turmas = new ArrayList<>();
 
         Banco banco = new Banco(cont);

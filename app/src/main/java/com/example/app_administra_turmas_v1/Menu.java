@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.app_administra_turmas_v1.activity.TurmasActivity;
+
 public class Menu extends AppCompatActivity {
     private Button btnTurmas;
 

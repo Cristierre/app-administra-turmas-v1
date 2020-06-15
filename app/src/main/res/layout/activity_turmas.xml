@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/books"
     android:orientation="vertical"
-    tools:context=".TurmasActivity">
+    tools:context=".activity.TurmasActivity">
 
     <include
         android:id="@+id/include"

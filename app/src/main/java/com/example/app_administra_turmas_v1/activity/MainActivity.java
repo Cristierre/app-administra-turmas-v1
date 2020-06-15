@@ -1,4 +1,4 @@
-package com.example.app_administra_turmas_v1;
+package com.example.app_administra_turmas_v1.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.app_administra_turmas_v1.Cadastro;
+import com.example.app_administra_turmas_v1.Menu;
+import com.example.app_administra_turmas_v1.R;
 import com.example.app_administra_turmas_v1.entities.Usuario;
 
 import static com.example.app_administra_turmas_v1.dao.UsuarioDAO.buscaPorNomeESenha;

@@ -1,4 +1,4 @@
-package com.example.app_administra_turmas_v1;
+package com.example.app_administra_turmas_v1.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.app_administra_turmas_v1.CadastroTurmas;
+import com.example.app_administra_turmas_v1.R;
 import com.example.app_administra_turmas_v1.dao.TurmaDAO;
 import com.example.app_administra_turmas_v1.entities.Turma;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -31,7 +33,7 @@ public class TurmasActivity extends AppCompatActivity {
         fab.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TurmasActivity.this,CadastroTurmas.class);
+                Intent intent = new Intent(TurmasActivity.this, CadastroTurmas.class);
                 startActivity(intent);
                 carregarTurmas();
             }
@@ -46,7 +48,7 @@ public class TurmasActivity extends AppCompatActivity {
 
     private void carregarTurmas () {
 
-        List<Turma> listaTurmas = TurmaDAO.listar(this);
+        List<Turma> listaTurmas = TurmaDAO.listarTurmas(this);
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         System.out.println(listaTurmas);
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
